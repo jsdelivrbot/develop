@@ -5,6 +5,7 @@ Serial.begin(9600);
 
 void loop() {
   // put your main code here, to run repeatedly:
-Serial.print("100");
+float x = 1;
+Serial.print(x);
 delay(1000);
 }
