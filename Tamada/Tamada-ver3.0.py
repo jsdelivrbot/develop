@@ -30,4 +30,5 @@ while True:
         ir = values[2]/10
         co2ppm = values[3]/10
 
-        print(tp,rh,ir,co2ppm)
+        print(tp,"℃",rh,"%")
+        time.sleep(1)
