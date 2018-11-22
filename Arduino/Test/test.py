@@ -2,7 +2,7 @@ import serial
 import time
 import re
 
-val_size = 3;
+val_size = 4;
 values = [0 for x in range(val_size)]
 isValids = [False for x in range(val_size)]
 ser = serial.Serial('/dev/ttyACM0', 9600, timeout=0.1)
