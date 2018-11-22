@@ -1,7 +1,9 @@
+#import
 import serial
 import time
 
-val_size = 2
+#kansu
+val_size = 4
 values = [0 for x in range(val_size)]
 isValids = [False for x in range(val_size)]
 ser = serial.Serial('/dev/ttyACM0',9600,timeout = 0.1)
@@ -25,5 +27,7 @@ while True:
     if all(i == True for i in isValids):
         tp = values[0]/10
         rh = values[1]/10
+        ir = values[2]/10
+        co2ppm = values[3]/10
 
-        print(values)
+        print(tp,rh,ir,co2ppm)
