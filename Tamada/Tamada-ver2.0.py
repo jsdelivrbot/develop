@@ -23,5 +23,6 @@ while True:
                 isValids[i] = True
 
     if all(i == True for i in isValids):
-        x = values[0]
-        print(x)
+        tp = values[0]/10
+        rh = values[1]/10
+        print(tp,"度",rh,"%")
