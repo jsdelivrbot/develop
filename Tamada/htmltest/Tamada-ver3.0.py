@@ -1,4 +1,5 @@
 #import
+from browser import document
 import serial
 import time
 
@@ -29,6 +30,9 @@ while True:
         rh = values[1]/10
         ir = values[2]/10
         co2ppm = values[3]/10
+
+        rh = document["rh"]
+        tp = document["tp"]
         
         print(tp,"℃",rh,"%")
         time.sleep(1)
