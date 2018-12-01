@@ -14,9 +14,9 @@ res = twitter.get(url, params = params)
 
 if res.status_code == 200: #正常通信出来た場合
         timelines = json.loads(res.text) #レスポンスからタイムラインリストを取得
-            for line in timelines: #タイムラインリストをループ処理
-                        print(line['user']['name']+'::'+line['text'])
-                                print(line['created_at'])
-                                        print('*******************************************')
+        for line in timelines: #タイムラインリストをループ処理
+            print(line['user']['name']+'::'+line['text'])
+            print(line['created_at'])
+            print('*******************************************')
 else: #正常通信出来なかった場合
     print("Failed: %d" % res.status_code)
